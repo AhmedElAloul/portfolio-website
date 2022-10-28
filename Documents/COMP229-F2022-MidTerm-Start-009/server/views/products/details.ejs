@@ -1,0 +1,70 @@
+<% include ../partials/header.ejs %>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6">
+        <h1>
+          <%= title %>
+        </h1>
+        <form class="form" method="post" id="update-product-form">
+          <div class="form-group">
+            <label for="IdTextField">Product id</label>
+            <input type="text" class="form-control" id="IdTextField" placeholder="Product id" name="Productid"
+              value="<%= products._id %>" required readonly />
+          </div>
+          <div class="form-group">
+            <label for="NameTextField">Product Name</label>
+            <input type="text" class="form-control" id="NameTextField" placeholder="Product name" name="Productname"
+              value="<%= products.Productname %>" required />
+          </div>
+
+          <div class="form-group">
+            <label for="DescTextField">Description</label>
+            <input type="text" class="form-control" id="DescTextField" placeholder="Product Description"
+              name="Description" value="<%= products.Description %>" required />
+          </div>
+
+          <div class="form-group">
+            <label for="PriceTextField">Price</label>
+            <input type="text" class="form-control" id="PriceTextField" placeholder="Product Price" name="price"
+              value="<%= products.Price %>" required />
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            <i class="fa fa-check-square-o"></i> Submit
+          </button>
+          <a href="/products" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    const form = document.getElementById("update-product-form")
+
+    form.onsubmit = (e) => {
+      e.preventDefault()
+
+      const Productid = e.target.Productid.value
+      const productName = e.target.Productname.value
+      const Description = e.target.Description.value
+      const price = e.target.price.value
+
+      fetch(`/products/${Productid}`, {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json"
+        },
+        body: JSON.stringify({ Productid, productName, Description, price })
+      }).then(res => res.json()).then(data => {
+        if (data) {
+          e.target.reset()
+          window.location.href = "/products"
+        }
+      })
+    }
+  </script>
+
+  <% include ../partials/footer.ejs %>
