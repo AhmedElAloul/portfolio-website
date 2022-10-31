@@ -1,0 +1,47 @@
+.service-section .box {}
+
+.service-section .box img {
+    max-width: 100px;
+    width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 7px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+}
+
+.service-section .box h3 {
+    margin: 20px 0 !important;
+    letter-spacing: 3px;
+}
+
+.service-section .box p {
+    letter-spacing: 0.1px;
+    color: var(--black-color);
+    text-align: justify;
+}
+
+
+.service-section .box.box-1 {
+    background: linear-gradient(to top, var(--fourth-color), var(--fifth-color));
+}
+
+.service-section .box.box-2 {
+    background: linear-gradient(to top, var(--fifth-color), var(--secondary-color));
+}
+
+.service-section .box.box-3 {
+    background: linear-gradient(to bottom, var(--secondary-color), var(--fourth-color));
+}
+
+.service-section .box.box-4 {
+    background: linear-gradient(to top, var(--fifth-color), var(--fourth-color));
+}
+
+.service-section .box.box-5 {
+    background: linear-gradient(to top, var(--secondary-color), var(--fifth-color));
+}
+
+.service-section .box.box-6 {
+    background: linear-gradient(to bottom, var(--fourth-color), var(--secondary-color));
+}

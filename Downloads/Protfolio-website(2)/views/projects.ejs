@@ -1,0 +1,169 @@
+<%- include('./partials/header', {data: {pageTitle} }); %>
+    <%- include('./partials/navbar', {data: {pageTitle} }); %>
+
+
+        <main>
+            <section class="projects-section my-5">
+                <div class="container">
+                    <h2 class="section-heading text-center mb-5">
+                        <span>M</span>y <span>P</span>rojects
+                    </h2>
+                    <div class="tabs-wrapper">
+                        <!-- Tabs navs -->
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
+                                    type="button" role="tab" aria-controls="all" aria-selected="true">All
+                                </button>
+                                <button class="nav-link" id="desktop-app-tab" data-bs-toggle="tab"
+                                    data-bs-target="#desktop-app" type="button" role="tab" aria-controls="desktop-app"
+                                    aria-selected="true">Desktop App
+                                </button>
+                                <button class="nav-link " id="web-development-tab" data-bs-toggle="tab"
+                                    data-bs-target="#web-development" type="button" role="tab"
+                                    aria-controls="web-development" aria-selected="true">Web Development
+                                </button>
+                            </div>
+                        </nav>
+                        <!-- Tabs navs -->
+
+                        <!-- Tabs content -->
+                        <div class="tab-content" id="nav-tabContent">
+
+
+                            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+
+                                <div class="row row-cols-1 row-cols-md-3">
+                                    <div class="col box p-3">
+                                        <div class="shadow rounded p-3">
+                                            <div class="img-box">
+                                                <img src="images/projects/pizza-company-desktop-app.jpeg" alt=""
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="info">
+                                                <h2 class="title">Desktop for pizza company</h2>
+                                                <p><strong>Category : </strong> Desktop App </p>
+                                                <p><strong>Technologies : </strong> C# </p>
+                                                <p>
+                                                    A windows desktop app developed using C# for a Pizza company that
+                                                    allows the user to input order details, and record the order.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col box p-3">
+                                        <div class="shadow rounded p-3">
+                                            <div class="img-box">
+                                                <img src="images/projects/bank-desktop-app.jpeg" alt=""
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="info">
+                                                <h2 class="title">Desktop for Bank</h2>
+                                                <p><strong>Category : </strong> Desktop App </p>
+                                                <p><strong>Technologies : </strong> C# </p>
+                                                <p>
+                                                    A Console banking application developed in using C# that will allow
+                                                    the user to perform various banking operations such as deposit and
+                                                    withdrawal of money from the bank account, with 2 types of accounts.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col box p-3">
+                                        <div class="shadow rounded p-3">
+                                            <div class="img-box">
+                                                <img src="images/projects/portfolio-website.png" alt=""
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="info">
+                                                <h2 class="title">Portfolio Website</h2>
+                                                <p><strong>Category : </strong> Web Development </p>
+                                                <p><strong>Technologies : </strong> Node.js, Express.js, EJS, etc </p>
+                                                <p>
+                                                    A portfolio website here i show my skills, projects, services.
+                                                    If anyone need my services then he/they can contact with me through
+                                                    my contact form of contact page.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane fade" id="desktop-app" role="tabpanel"
+                                aria-labelledby="desktop-app-tab">
+
+                                <div class="row row-cols-1 row-cols-md-3">
+                                    <div class="col box p-3">
+                                        <div class="shadow rounded p-3">
+                                            <div class="img-box">
+                                                <img src="images/projects/pizza-company-desktop-app.jpeg" alt=""
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="info">
+                                                <h2 class="title">Desktop for pizza company</h2>
+                                                <p><strong>Category : </strong> Desktop App </p>
+                                                <p><strong>Technologies : </strong> C# </p>
+                                                <p>
+                                                    A windows desktop app developed using C# for a Pizza company that
+                                                    allows the user to input order details, and record the order.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col box p-3">
+                                        <div class="shadow rounded p-3">
+                                            <div class="img-box">
+                                                <img src="images/projects/bank-desktop-app.jpeg" alt=""
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="info">
+                                                <h2 class="title">Desktop for Bank</h2>
+                                                <p><strong>Category : </strong> Desktop App </p>
+                                                <p><strong>Technologies : </strong> C# </p>
+                                                <p>
+                                                    A Console banking application developed in using C# that will allow
+                                                    the user to perform various banking operations such as deposit and
+                                                    withdrawal of money from the bank account, with 2 types of accounts.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="web-development" role="tabpanel"
+                                aria-labelledby="web-development-tab">
+
+                                <div class="row row-cols-1 row-cols-md-3">
+                                    <div class="col box p-3">
+                                        <div class="shadow rounded p-3">
+                                            <div class="img-box">
+                                                <img src="images/projects/portfolio-website.png" alt=""
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="info">
+                                                <h2 class="title">Portfolio Website</h2>
+                                                <p><strong>Category : </strong> Web Development </p>
+                                                <p><strong>Technologies : </strong> Node.js, Express.js, EJS, etc </p>
+                                                <p>
+                                                    A portfolio website here i show my skills, projects, services.
+                                                    If anyone need my services then he/they can contact with me through
+                                                    my contact form of contact page.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Tabs content -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <%- include('./partials/footer'); %>

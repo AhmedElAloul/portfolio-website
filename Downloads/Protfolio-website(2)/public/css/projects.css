@@ -1,0 +1,70 @@
+.projects-section nav .nav-tabs {
+    justify-content: space-between;
+    width: fit-content;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.projects-section nav .nav-tabs .nav-link {
+    color: var(--primary-color);
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border: 1px solid var(--primary-color);
+    margin: 4px 8px;
+    padding: 4px 16px;
+}
+
+.projects-section nav .nav-tabs .nav-link.active {
+    color: var(--white-color);
+    background: var(--primary-color);
+    font-weight: bold;
+}
+
+
+.projects-section #nav-tabContent {
+    margin-top: 20px;
+    min-height: 40vh;
+}
+
+.projects-section #nav-tabContent .box {}
+
+.projects-section #nav-tabContent .box .shadow {
+    height: 100%;
+}
+
+.projects-section #nav-tabContent .box .img-box {
+    max-height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 15px;
+    border: 2px solid var(--fifth-color);
+    border-radius: 7px;
+}
+
+.projects-section #nav-tabContent .box .img-box::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 12px;
+    padding: 0 1px;
+}
+
+.projects-section #nav-tabContent .box .img-box::-webkit-scrollbar-track {
+    background: linear-gradient(to top, var(--secondary-color), var(--third-color));
+}
+
+.projects-section #nav-tabContent .box .img-box::-webkit-scrollbar-thumb {
+    background: var(--black-color);
+    max-width: 5px;
+    margin: 0 1px;
+    border-radius: 12px;
+}
+
+
+.projects-section #nav-tabContent .box .info .title {
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.projects-section #nav-tabContent .box .info p {
+    font-size: 15px;
+    margin-bottom: 5px;
+}

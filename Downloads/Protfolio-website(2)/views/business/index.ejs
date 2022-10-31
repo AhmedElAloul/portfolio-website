@@ -1,0 +1,72 @@
+<%- include('../partials/header', {data: {pageTitle} }); %>
+    <%- include('../partials/navbar', {data: {pageTitle} }); %>
+
+        <main>
+            <section class="business my-5">
+                <div class="container">
+                    <h2 class="text-center text-primary">Business Contact List</h2>
+                    <div class="table-wrapper">
+                        <table class="table table-stripe">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#ID</th>
+                                    <th scope="col">Contact Name</th>
+                                    <th scope="col">Contact Number</th>
+                                    <th scope="col">Email Address</th>
+                                    <th scope="col">Edit</th>
+                                    <th scope="col">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(let count=0; count < business.length; count++){ %>
+                                    <tr>
+                                        <th scope="row">
+                                            <%= business[count]._id %>
+                                        </th>
+                                        <td>
+                                            <%= business[count].name %>
+                                        </td>
+                                        <td>
+                                            <%= business[count].number %>
+                                        </td>
+                                        <td>
+                                            <%= business[count].email %>
+                                        </td>
+                                        <td>
+                                            <a href="/business/update/<%=business[count]._id %>"
+                                                style="font-size: 20px; text-decoration: none;">
+                                                &#9998; </a>
+                                        </td>
+                                        <td>
+                                            <button onclick='deleteBusiness("<%=business[count]._id%>")'
+                                                style="border: none; font-size: 20px;">&#128465;</button>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <script>
+            function deleteBusiness(businessId) {
+                fetch("/business/delete", {
+                    method: "DELETE",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify({ userId: hasUser._id, businessId })
+                }).then(res => res.json()).then(data => {
+                    if (data) {
+                        window.location.href = "/business"
+                    }
+                }).catch(error => {
+                    alert(error)
+                })
+            }
+        </script>
+
+        <%- include('../partials/footer'); %>
