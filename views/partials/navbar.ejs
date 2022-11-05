@@ -1,0 +1,64 @@
+<script>
+    const hasUser = localStorage.getItem("userInfo") ? JSON.parse(localStorage.getItem("userInfo")) : null
+
+    const ifBusinessUrl = window.location.pathname.includes("/business")
+
+    if (ifBusinessUrl && !hasUser) {
+        window.location.href = "/auth/login"
+    }
+
+</script>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <div class="logo" id="logo">
+            <a href="/">
+                <img src="<%=data.path?data.path:''%>images/logo.jpeg" alt=""
+                    style="max-width: 60px; width: 100%; border-radius: 7px; box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5);">
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 menu mt-4 mt-md-0" id="menu">
+                <li class="nav-item">
+                    <a href="/" class="<%= data.pageTitle == 'Home' ? 'active' : '' %>">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/projects" class="<%= data.pageTitle == 'Projects' ? 'active' : '' %>">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/services" class="<%= data.pageTitle == 'Services' ? 'active' : '' %>">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="<%= data.pageTitle == 'About' ? 'active' : '' %>">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact" class="<%= data.pageTitle == 'Contact' ? 'active' : '' %>">Contact</a>
+                </li>
+            </ul>
+            <div>
+                <a href="/contact" class="btn btn-primary me-2">Hire Me</a>
+            </div>
+            <div>
+                <a href="/business" class="btn btn-secondary border-secondary me-2">Member Login</a>
+                <script>
+                    document.write(hasUser ? "<button class=\"btn btn-danger border-danger\" id=\"logout-btn\">LogOut</button>" : "<a href=\"auth/login\" class=\"btn btn-warning border-warning\">LogIn</a>")
+                </script>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<script>
+    const logOutBtn = document.getElementById("logout-btn")
+    if (logOutBtn) {
+        logOutBtn.onclick = () => {
+            localStorage.removeItem("userInfo")
+            window.location.href = "/"
+        }
+    }
+</script>

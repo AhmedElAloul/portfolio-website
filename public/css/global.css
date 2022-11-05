@@ -1,0 +1,221 @@
+/* 
+
+
+ */
+
+
+/*  The File name   =   Ahmed's Portfolio
+    Student’s Name  =   Ahmed El-Aloul
+    StudentID       =   301170922
+    Date            =   2022-09-30
+*/
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    font-family: "Jost";
+}
+
+
+:root {
+    --primary-color: #19a74b;
+    --secondary-color: #ffc900;
+    --third-color: #dc5400;
+    --fourth-color: #18ffed;
+    --fifth-color: #b4ff78;
+    --dark-color: #999999;
+    --black-color: #000000;
+    --light-color: #eeeeee;
+    --white-color: #FFFFFF;
+}
+
+
+p,
+a {
+    font-family: "Nuito";
+}
+
+@font-face {
+    font-family: "Nuito";
+    src: url(../fonts/nunito/Nunito-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url(../fonts/jost/Jost-Regular.ttf);
+}
+
+.section-heading {
+    color: var(--secondary-color) !important;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.section-heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 170px;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to left, var(--secondary-color), var(--third-color));
+}
+
+.section-heading span {
+    color: var(--third-color) !important;
+    font-size: 110%;
+    font-weight: 600;
+}
+
+
+.btn {
+    padding: 8px 22px;
+    border-radius: 7px;
+    font-size: 16px;
+    outline: none;
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn-primary:hover {
+    background: var(--black-color);
+    color: var(--white-color);
+    border: 1px solid var(--black-color);
+}
+
+.btn-primary-outline {
+    background: var(--white-color);
+    color: var(--primary-color);
+}
+
+.btn-primary-outline:hover {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+
+
+
+
+
+/* ======================== Home Page ======================== */
+.hero-section .col p {
+    color: #999999;
+    letter-spacing: 2px;
+}
+
+.hero-section .col h2 {
+    color: #000000;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    margin: 22px 0;
+}
+
+.hero-section .col p.paragraph-2 {
+    color: #000000;
+    letter-spacing: 0.5px;
+    padding-left: 0 !important;
+}
+
+
+.hero-section .img-box-wrapper {
+    position: relative;
+}
+
+.hero-section .img-box-outline {
+    border: 15px solid var(--dark-color);
+    position: absolute;
+    left: 10%;
+    top: -10%;
+    width: 100%;
+    height: 100%;
+    max-width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .img-box {
+    max-width: 280px;
+    width: 100%;
+    margin: auto;
+    border: 5px solid var(--light-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    position: relative;
+    z-index: 99999;
+}
+
+.hero-section .img-box img {
+    border-radius: 6px;
+}
+
+/* ==================xxx=== Home Page ===xxx================== */
+
+
+
+
+
+
+
+/* ======================== About Page ======================== */
+.about-section {
+    margin-bottom: 40px;
+}
+
+.about-section .img-box {
+    max-width: 320px;
+    width: 100%;
+    margin: auto;
+    border-radius: 8px;
+    border: 10px solid var(--white-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.about-section h2 {
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    margin: 20px 0;
+}
+
+.about-section h5 {
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.about-section h5 span {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.about-section .box-2 {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.about-section p {
+    color: var(--black-color);
+    font-size: 14px;
+}
+
+/* ==================xxx=== About Page ===xxx================== */

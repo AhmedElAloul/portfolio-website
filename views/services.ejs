@@ -1,0 +1,89 @@
+<%- include('./partials/header', {data: {pageTitle} }); %>
+    <%- include('./partials/navbar', {data: {pageTitle} }); %>
+
+        <main>
+            <section class="service-section my-4"
+                style="background: url(images/hero-section-bg-img.png); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                <div class="container">
+                    <h2 class="text-center text-secondary mb-4 section-heading">My Services</h2>
+                    <p class="text-center text-secondary">Here are the services that i am providing among all of my
+                        clients
+                    </p>
+                    <div class="services row row-cols-1 row-cols-md-3 ">
+                        <div class="p-4 col">
+                            <div
+                                class="shadow rounded p-4 text-center box box-1 h-100 d-flex flex-column justify-content-between">
+                                <img src="images/services/ui-ux-design-icon.png" alt="" class="img-fluid" />
+                                <h3 class="my-3">UI/UX Design</h3>
+                                <p>
+                                    Ui/UX design is very import for any web development or mobile app's projects.
+                                    By making ui/ux design, you can get the idea of how the website or app's will look
+                                    like and how it will work.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-4 col">
+                            <div
+                                class="shadow rounded p-4 text-center box box-2 h-100 d-flex flex-column justify-content-between">
+                                <img src="images/services/web-design-icon.png" alt="" class="img-fluid" />
+                                <h3 class="my-3">Web Design</h3>
+                                <p>
+                                    Web design is basically make an static website where not use database and server.
+                                    Web design is mainly for very small business.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-4 col">
+                            <div
+                                class="shadow rounded p-4 text-center box box-3 h-100 d-flex flex-column justify-content-between">
+                                <img src="images/services/web-development-icon.png" alt="" class="img-fluid" />
+                                <h3 class="my-3">Web Development</h3>
+                                <p>
+                                    Web development is the most important part of web development process.
+                                    In web development, need to work with database and server side as well as front-end.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-4 col">
+                            <div
+                                class="shadow rounded p-4 text-center box box-4 h-100 d-flex flex-column justify-content-between">
+                                <img src="images/services/custom-website-icon.png" alt="" class="img-fluid" />
+                                <h3 class="my-3">Full Custom Website</h3>
+                                <p>
+                                    I am offering people for full custom website. Sometime people need custom features
+                                    and need to use different technologies and that's why full custom website
+                                    development servicer is very important.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-4 col">
+                            <div
+                                class="shadow rounded p-4 text-center box box-5 h-100 d-flex flex-column justify-content-between">
+                                <img src="images/services/wordpress-website-icon.png" alt="" class="img-fluid" />
+                                <h3 class="my-3">Wordpress website</h3>
+                                <p>
+                                    Wordpress is for making website development process easier. Wordpress is very
+                                    usefull for webstie owner.
+                                    Website owner can change anything anytime without knowning code.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-4 col">
+                            <div
+                                class="shadow rounded p-4 text-center box box-6 h-100 d-flex flex-column justify-content-between">
+                                <img src="images/services/custom-solution-icon.png" alt="" class="img-fluid" />
+                                <h3 class="my-3">Need A Custom Solution</h3>
+                                <p>
+                                    if you need any custom services then just click
+                                    <kbd>get a quote</kbd>
+                                    button to get a quote for your custom services
+                                </p>
+                                <a href="/contact" class="btn btn-primary-outline">Get A Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <%- include('./partials/footer'); %>

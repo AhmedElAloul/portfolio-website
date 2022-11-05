@@ -1,0 +1,44 @@
+<%- include('./partials/header', {data: {pageTitle} }); %>
+    <%- include('./partials/navbar', {data: {pageTitle} }); %>
+
+        <main>
+            <section class="about-section"
+                style="background: url(images/hero-section-bg-img.png); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                <div class="container my-4">
+                    <h2 class="section-heading text-center mb-5">
+                        About <span>Me</span>
+                    </h2>
+                    <div class="row row-cols-1 row-cols-md-2 align-items-center">
+                        <div class="col mb-5 mb-md-0">
+                            <div class="img-box">
+                                <img src="images/hero-section-img.jpeg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col box-2">
+                            <h3>Ahmed El-Aloul</h3>
+                            <h2 class="">Full-stack web developer</h2>
+                            <h5>Since <span>2020-current</span></h5>
+                            <p>
+                                Hello visitor!
+                                My name is Ahmed El-Aloul and I am a 2nd year Software Engineering Technology
+                                (Artificial Intelligence) Student at Centennial College in Toronto, Canada and I have a
+                                passion for software and web development. My passion for coding started in my early
+                                teens teaching myself HTML, CSS, and PHP, and from there on I started making mySpace
+                                style templates for my friends before I moved on to making websites for small businesses
+                                and that’s where I quickly saw a future in software development.
+                            </p>
+                            <p>
+                                I Decided to pursue an
+                                education in the software field in order to further pursue my passion, and that’s where
+                                I quickly begun to familiarize myself with languages such as C#, C+/++, Python, Java,
+                                JavaScript, and more. I hope to work with you soon!
+                            </p>
+                            <a href="/contact" class="btn btn-primary-outline me-2">Get A Quote</a>
+                            <a href="pdf/resume.pdf" class="btn btn-primary">My Resume</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <%- include('./partials/footer'); %>
